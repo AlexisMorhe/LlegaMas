@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from './Footer';
 
-export default function HomeLayout({title, description, children}) {
+export default function Layout({title, description, children}) {
   return (
     <>
       <Head>
@@ -17,11 +17,13 @@ export default function HomeLayout({title, description, children}) {
         <meta name='og:locale' content='es_MX'/>
         <meta name='og:site_name' content='Llega Más'/>
         <meta name='og:title' content='Envía más dinero a tu familia'/>
+        <meta name='og:image' content='https://res.cloudinary.com/dimizna0i/image/upload/v1673846104/p7ouljrazf0nl5petgse.png'/>
         <meta name='og:description' content='Ofrecemos préstamos amigables a personas que envían remesas regularmente a sus familias.'/>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
         <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#043427"/>
         <meta name="msapplication-TileColor" content="#fff9eb"/>
         <meta name="theme-color" content="#fff9eb"/>
       </Head>

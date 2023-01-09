@@ -29,12 +29,14 @@ export default function Header() {
   return (
     <>
       <header className='w-full h-24 px-5 md:pr-0 pt-1 flex justify-between md:justify-center lg:justify-around items-center backdrop-blur-md fixed z-20'>
-        <div className='flex justify-between w-1/2 md:w-3/5'>
+        <div className='flex justify-start items-center md:justify-between w-1/2 md:w-3/5'>
           <div className='pt-0.5 block md:hidden'>
             <FiMenu onClick={() => setOpenMenu(openMenu => !openMenu)} size={25} />
           </div>
-          <Link className='transition-all hover:scale-105 flex items-center' href='/'><Image width={20} src={Logo} alt='Logo del sitio' priority/>
-          <p className='font-outfit font-bold text-lg md:text-2xl ml-4'>Llega Más</p></Link>
+          <Link className='transition-all hover:scale-105 flex items-center pl-4 sm:pl-10 md:pl-0 pt-0' href='/'>
+            <Image width={40} src={Logo} alt='Logo del sitio' priority/>
+            <p className='hidden sm:inline font-outfit font-bold text-lg md:text-2xl ml-5 pt-3'>Llega<br/> Más</p>
+          </Link>
           <nav className='hidden md:flex justify-around items-center w-52 md:w-80 mr-0 lg:mr-12'>
             {navigation.map((item, index) => <NavLink key={index} scroll={index === 0} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
           </nav>
