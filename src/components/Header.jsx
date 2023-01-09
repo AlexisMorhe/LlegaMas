@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <>
       <header className='w-full h-24 px-5 md:pr-0 pt-1 flex justify-between md:justify-center lg:justify-around items-center backdrop-blur-md fixed z-20'>
-        <div className='flex justify-between w-2/5 md:w-3/5'>
+        <div className='flex justify-between w-1/2 md:w-3/5'>
           <div className='pt-0.5 block md:hidden'>
             <FiMenu onClick={() => setOpenMenu(openMenu => !openMenu)} size={25} />
           </div>

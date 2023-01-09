@@ -20,7 +20,7 @@ const variantStyles = {
 }
 
 const sizeStyles = {
-  small: 'py-2.5 sm:py-3 text-sm sm:text-base',
+  small: 'py-2.5 sm:py-3 text-base',
   medium: 'text-lg py-3',
   big: 'text-xl py-3 w-72'
 }

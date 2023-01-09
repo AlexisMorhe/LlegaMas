@@ -26,12 +26,12 @@ const steps = [
 
 export default function PrimaryFeatures() {
   return (
-    <div id='como-funciona' className='h-fit bg-white w-full flex flex-col items-center'>
-      <h2 className='text-4xl font-semibold h-52'>Un préstamo con base en los envíos que recibes</h2>
-      <div className='flex w-5/6 justify-between'>
+    <div id='como-funciona' className='h-fit pt-32 bg-white w-full flex flex-col items-center'>
+      <h2 className='text-3xl md:text-4xl text-center lg:text-left px-4 lg:px-0 font-semibold h-52'>Un préstamo con base en los envíos que recibes</h2>
+      <div className='flex w-5/6 justify-between flex-col md:flex-row'>
         {steps.map((step, index) => {
           return (
-            <div key={index} className='flex flex-col w-1/4 items-center justify-around h-[50vh]'>
+            <div key={index} className='flex flex-col w-full md:w-1/4 px-5 md:px-0 mb-20 md:mb-0 items-center justify-around h-[50vh]'>
               <Image src={step.image} alt={step.imageAlt} />
               <h3 className='text-2xl font-semibold'>{step.title}</h3>
               <p className='text-xl text-center leading-relaxed'>{step.description}</p>
