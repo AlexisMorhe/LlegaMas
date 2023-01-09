@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavLink({href, pathname, mobile = false, children}) {
+export default function NavLink({href, pathname, mobile = false, scroll = true, children}) {
 
   let className = '';
   if (pathname && mobile){
@@ -14,7 +14,7 @@ export default function NavLink({href, pathname, mobile = false, children}) {
   }
 
   return (
-    <Link href={href} scroll={false} className={className}>
+    <Link href={href} scroll={scroll} className={className}>
       {children}
     </Link>
   )

@@ -33,17 +33,15 @@ export default function Header() {
           <div className='pt-0.5 block md:hidden'>
             <FiMenu onClick={() => setOpenMenu(openMenu => !openMenu)} size={25} />
           </div>
-          <div className='transition-all hover:scale-110 flex items-center'>
-            <Link href='/'><Image width={20} src={Logo} alt='Logo del sitio' priority/></Link>
-            <p className='font-outfit font-bold text-lg md:text-2xl ml-4'>Llega Más</p>
-          </div>
+          <Link className='transition-all hover:scale-105 flex items-center' href='/'><Image width={20} src={Logo} alt='Logo del sitio' priority/>
+          <p className='font-outfit font-bold text-lg md:text-2xl ml-4'>Llega Más</p></Link>
           <nav className='hidden md:flex justify-around items-center w-52 md:w-80 mr-0 lg:mr-12'>
-            {navigation.map((item, index) => <NavLink key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
+            {navigation.map((item, index) => <NavLink key={index} scroll={index === 0} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
           </nav>
         </div>
         <div className='w-1/3 pl-4 sm:w-1/2 md:w-80 flex justify-around items-center'>
           {/*<NavLink href='/login'>Iniciar sesión</NavLink>*/}
-          <Button href='#contacto'>Regístrate</Button>
+          <Button scroll={false} href='#contacto'>Regístrate</Button>
         </div>
       </header>
       <div className={openMenu ? 'block fixed overflow-y-clip z-20 w-full h-full flex flex-col bg-rainforest'
@@ -55,7 +53,7 @@ export default function Header() {
           {navigation.map((item, index) => <NavLink mobile={true} key={index} href={item.href} pathname={router.pathname}>{item.name}</NavLink>)}
           <div className='w-5/6 pt-16 h-52 flex flex-col justify-around'>
             {/*<Button size='medium' color='white' variant='outline' href='/registro'>Inicia Sesión</Button>*/}
-            <Button size='medium' color='up-forest-green' href='#contacto'>Registrate</Button>
+            <Button size='medium' color='up-forest-green' scroll={false} href='#contacto'>Registrate</Button>
           </div>
         </div>
       </div>

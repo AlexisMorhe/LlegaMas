@@ -26,7 +26,7 @@ const sizeStyles = {
 }
 
 
-export default function Button({variant = 'solid', color = 'rainforest', size = 'small', className = '', href, onClick, children}) {
+export default function Button({variant = 'solid', color = 'rainforest', size = 'small', className = '', href, onClick, scroll = true, children}) {
 
   className = clsx(
     baseStyles[variant],
@@ -36,7 +36,7 @@ export default function Button({variant = 'solid', color = 'rainforest', size = 
   )
 
   if (href) {
-    return <Link href={href} scroll={false} className={className}>{children}</Link>
+    return <Link href={href} scroll={scroll} className={className}>{children}</Link>
   } else if (onClick) {
     return <button onClick={onClick} className={className}>{children}</button>
   } else {
