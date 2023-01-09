@@ -2,14 +2,14 @@ import Link from "next/link";
 import clsx from "clsx";
 
 const baseStyles = {
-  solid: 'block text-center sm:mb-0 px-4 sm:px-8 rounded-md font-semibold transition-all hover:scale-105',
+  solid: 'block text-center sm:mb-0 px-4 sm:px-8 rounded-md font-semibold transition-all hover:scale-105 shadow-md',
   outline: 'block text-center sm:mb-0 px-4 sm:px-8 rounded-md font-semibold transition-all border-2 hover:scale-105'
 }
 
 const variantStyles = {
   solid: {
-    rainforest: 'bg-rainforest hover:caribbean-green text-clock-chimes-thirteen',
-    blue: 'bg-sky-900 hover:bg-sky-600 text-slate-50 shadow-md'
+    rainforest: 'bg-rainforest hover:bg-caribbean-green text-clock-chimes-thirteen',
+    'up-forest-green': 'bg-up-forest-green hover:bg-coach-green text-toasted-marshmallow'
   },
   outline: {
     slate: 'border-slate-900 text-slate-900 shadow-md',
@@ -36,7 +36,7 @@ export default function Button({variant = 'solid', color = 'rainforest', size = 
   )
 
   if (href) {
-    return <Link href={href} className={className}>{children}</Link>
+    return <Link href={href} scroll={false} className={className}>{children}</Link>
   } else if (onClick) {
     return <button onClick={onClick} className={className}>{children}</button>
   } else {
