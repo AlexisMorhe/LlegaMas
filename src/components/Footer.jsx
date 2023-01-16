@@ -38,7 +38,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className='bg-coach-green text-toasted-marshmallow font-semibold py-12 px-4 h-52 w-full'>
+    <footer className='bg-up-forest-green text-toasted-marshmallow font-semibold py-12 px-4 h-52 w-full'>
       <div className="mx-auto max-w-7xl h-full py-8 md:py-12 px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
